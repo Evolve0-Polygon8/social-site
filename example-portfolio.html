@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name — Portfolio</title>
+
+    <!-- Your requested CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-base-100 text-base-content">
+
+    <!-- FIXED NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-base-100 border-b border-base-200">
+        <div class="navbar mx-auto px-4">
+            <!-- Left: Home button -->
+            <div class="navbar-start">
+                <a href="#top" class="btn btn-ghost btn-sm normal-case font-semibold tracking-wide">
+                    Home
+                </a>
+            </div>
+
+            <!-- Right: Social icons -->
+            <div class="navbar-end gap-1">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-ghost btn-circle" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.2 8.25h4.6V24H.2V8.25zM8.34 8.25h4.41v2.13h.06c.61-1.16 2.11-2.38 4.35-2.38 4.65 0 5.51 3.06 5.51 7.04V24h-4.6v-7.41c0-1.77-.03-4.05-2.47-4.05-2.47 0-2.85 1.93-2.85 3.92V24h-4.6V8.25z" />
+                    </svg>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-ghost btn-circle" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <circle cx="17.5" cy="6.5" r="0.9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16"><!-- space for navbar -->
+
+        <!-- HERO SECTION (fixed content, scroll-over effect) -->
+        <section id="top" class="relative h-[calc(100vh-4rem)]">
+            <!-- Fixed hero block: background + overlay + centered content + chevron -->
+            <div class="fixed inset-x-0 top-16 bottom-0 z-0 bg-cover bg-center"
+                style="background-image: url('https://images.pexels.com/photos/34088/pexels-photo.jpg');">
+                <!-- dark overlay -->
+                <div class="absolute inset-0 bg-black/70"></div>
+
+                <!-- centered hero content -->
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-white">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold max-w-2xl">
+                        Title
+                    </h1>
+                    <p class="mt-4 max-w-xl text-sm md:text-base text-gray-200">
+                        A curated selection of visual projects, experiments, and case studies.
+                    </p>
+                    <div class="mt-8">
+                        <!-- custom OKLCH color button -->
+                        <a href="#works"
+                            class="btn border-none bg-[oklch(71.6%_0.024_109.7)] text-black hover:brightness-110">
+                            View My Work
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WORKS GRID SECTION (scrolls over hero) -->
+        <section id="works" class="relative z-10 py-16 md:py-20 bg-base-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="mb-10 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold">Selected Work</h2>
+                    <p class="mt-3 text-sm md:text-base text-base-content/70">
+                        Hover over a project to reveal details.
+                    </p>
+                </div>
+
+                <!-- 15 PROJECT TILES -->
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- You can swap titles/descriptions/images per project -->
+
+                    <!-- PROJECT 1 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/196642/pexels-photo-196642.jpeg" alt="Project 1"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/3739653/pexels-photo-3739653.jpeg"
+                            alt="Project 1 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 1</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 1.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg" alt="Project 2"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/1029615/pexels-photo-1029615.jpeg"
+                            alt="Project 2 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 2</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 2.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg" alt="Project 3"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/167404/pexels-photo-167404.jpeg" alt="Project 3 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 3</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 3.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECTS 4–15 (repeat pattern) -->
+                    <!-- You can reuse the same two images or pick new ones -->
+                    <!-- PROJECT 4 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 4"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 4 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 4</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 4.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 5 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 5"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 5 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 5</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 5.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 6 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 6"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 6 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 6</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 6.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 7 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 7"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 7 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 7</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 7.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 8 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 8"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 8 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 8</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 8.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 9 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 9"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 9 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 9</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 9.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 10 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 10"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 10 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 10</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 10.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 11 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 11"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 11 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 11</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 11.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 12 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 12"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 12 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 12</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 12.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 13 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 13"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 13 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 13</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 13.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 14 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 14"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 14 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 14</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 14.</p>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 15 -->
+                    <article
+                        class="group relative overflow-hidden rounded-lg shadow-sm bg-base-200/40 border border-base-300 min-h-[260px] cursor-pointer">
+                        <img src="https://images.pexels.com/photos/34088/pexels-photo.jpg" alt="Project 15"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+                        <img src="https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg" alt="Project 15 alt"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-black/60 transition-colors duration-300">
+                        </div>
+                        <div
+                            class="relative z-10 flex h-full flex-col justify-end p-5 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 text-white">
+                            <h3 class="text-lg font-semibold">Project 15</h3>
+                            <p class="mt-2 text-sm text-gray-200">Short description for project 15.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 btn btn-circle btn-primary shadow-lg opacity-0 pointer-events-none transition-opacity"
+        aria-label="Back to top">
+        &#x25B2;
+    </button>
+
+    <!-- JS: scroll + back-to-top -->
+    <script>
+        const scrollDownBtn = document.getElementById("scroll-down");
+        const worksSection = document.getElementById("works");
+        const backToTopBtn = document.getElementById("back-to-top");
+
+        if (scrollDownBtn && worksSection) {
+            scrollDownBtn.addEventListener("click", () => {
+                worksSection.scrollIntoView({ behavior: "smooth" });
+            });
+        }
+
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > window.innerHeight * 0.5) {
+                backToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+            } else {
+                backToTopBtn.classList.add("opacity-0", "pointer-events-none");
+            }
+        });
+    </script>
+</body>
+
+</html>
